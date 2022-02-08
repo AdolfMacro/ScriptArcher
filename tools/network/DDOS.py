@@ -50,7 +50,7 @@ def DDOSmainF():
                 except KeyboardInterrupt:
                     pass
             elif selection=="2":
-                print(f"\n{clear()}\n{randomColorF()}1. TCP\n2. UDP\n3. ICMP\n\n")
+                print(f"\n{system("clear")}\n{randomColorF()}1. TCP\n2. UDP\n3. ICMP\n\n")
                 selection2=input(f"{randomColorF()}[DDoS]~> ")
                 Dst=input("\n\nEnter the packet destination IP : ")
                 if selection2=="1" or selection2=="2":
