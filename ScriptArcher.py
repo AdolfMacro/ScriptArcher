@@ -68,9 +68,9 @@ def main():
             ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝       |/
                                                                                                                    (
 
-            1. What is my IP                       8. Bind on Server (TCP/UDP)
+            1. What is my IP                       8. Bind on Server (TCP)
             
-            2. Mass Mailer Attack                  9. Connect to Server (TCP/UDP)
+            2. Mass Mailer Attack                  9. Connect to Server (TCP)
             
             3. Scan                                10. dBm Analyzer
 
