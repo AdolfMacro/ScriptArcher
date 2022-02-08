@@ -84,7 +84,7 @@ def DDOSmainF():
                     except KeyboardInterrupt:
                         pass
             elif selection=="3":
-                print(f"{clear()}{randomColorF()}1. Normal attack\n\n2. Smurf attack\n\n")
+                print(f"{system("clear")}{randomColorF()}1. Normal attack\n\n2. Smurf attack\n\n")
                 selection2=input(f"{randomColorF()}[DDoS]~> ")
                 Dst=input("\n\nEnter the packet destination IP : ")
                 while 1:
