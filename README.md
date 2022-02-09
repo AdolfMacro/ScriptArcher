@@ -50,14 +50,15 @@ re=get("https://www.whoismyisp.org/")
 
 	Receives an email from you as the sender and a list of recipients then enters your email and sends the same email to all emails in the list.
 
-	**syntax of mailing file **:
+**syntax of mailing file**:
 
 
-
-	example@example.com
-	example2@example.com
-	example3@example.com
-	and ...
+  ```
+  example@example.com
+  example2@example.com
+  example3@example.com
+  and ...
+  ```
 
  It then asks you for an smtp server address including port and address. A list of the most popular smtp servers:
 
