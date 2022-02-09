@@ -107,26 +107,26 @@ Any SYN-ACK responses are possibly open ports. An RST(reset) response means the 
 - #### DDoS :
 This tool uses scapy to send flooding packets to target .
 ##### Options :
-	1. **ICMP attack** :
-	This option send flood of normal icmp packets to target .
-	Scapy command : 
-			packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/TCP(sport=randint(1024 ,49151), dport=Dport)
-			send(packet)
-	2. **Smurf attack**:
-	The Smurf attack is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP broadcast address. Most devices on a network will, by default, respond to this by sending a reply to the source IP address. If the number of machines on the network that receive and respond to these packets is very large, the victim's computer will be flooded with traffic. This can slow down the victim's computer to the point where it becomes impossible to work on...[more](https://en.wikipedia.org/wiki/Smurf_attack "more")
-	Scapy commands :
-			TCP :packet = IP(dst=Dst, src=Src)/TCP(sport=Sport, dport=Dport,flags="S")
-			UDP : packet = IP(dst=Dst, src=Src)/UDP(sport=Sport, dport=Dport)
-			ICMP : packet = IP(dst=Dst, src=Src)/ICMP()
-	3. **TCP state existing** :
-	In a SYN flood attack, the attacker sends repeated SYN packets to every port on the targeted server, often using a fake IP address. The server, unaware of the attack, receives multiple, apparently legitimate requests to establish communication. It responds to each attempt with a SYN-ACK packet from each open port.
-	Scapy command :
-			packet = IP(dst=Dst, src=Src)/TCP(sport=Sport, dport=Dport,flags="S")
-	4. **UDP flooding **:
-	A UDP flood is a type of denial-of-service attack in which a large number of User Datagram Protocol (UDP) packets are sent to a targeted server with the aim of overwhelming that device’s ability to process and respond. The firewall protecting the targeted server can also become exhausted as a result of UDP flooding, resulting in a denial-of-service to legitimate traffic.
-	Scapy command :
-			Random mode : packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/UDP(sport=randint(4096,65535), dport=port)
-			Normal attack :packet = IP(dst=Dst, src=Src)/UDP(sport=Sport, dport=port)
+1. **ICMP attack** :
+This option send flood of normal icmp packets to target .
+Scapy command : 
+		packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/TCP(sport=randint(1024 ,49151), dport=Dport)
+		send(packet)
+2. **Smurf attack**:
+The Smurf attack is a distributed denial-of-service attack in which large numbers of Internet Control Message Protocol (ICMP) packets with the intended victim's spoofed source IP are broadcast to a computer network using an IP broadcast address. Most devices on a network will, by default, respond to this by sending a reply to the source IP address. If the number of machines on the network that receive and respond to these packets is very large, the victim's computer will be flooded with traffic. This can slow down the victim's computer to the point where it becomes impossible to work on...[more](https://en.wikipedia.org/wiki/Smurf_attack "more")
+Scapy commands :
+		TCP :packet = IP(dst=Dst, src=Src)/TCP(sport=Sport, dport=Dport,flags="S")
+		UDP : packet = IP(dst=Dst, src=Src)/UDP(sport=Sport, dport=Dport)
+		ICMP : packet = IP(dst=Dst, src=Src)/ICMP()
+3. **TCP state existing** :
+In a SYN flood attack, the attacker sends repeated SYN packets to every port on the targeted server, often using a fake IP address. The server, unaware of the attack, receives multiple, apparently legitimate requests to establish communication. It responds to each attempt with a SYN-ACK packet from each open port.
+Scapy command :
+		packet = IP(dst=Dst, src=Src)/TCP(sport=Sport, dport=Dport,flags="S")
+4. **UDP flooding **:
+A UDP flood is a type of denial-of-service attack in which a large number of User Datagram Protocol (UDP) packets are sent to a targeted server with the aim of overwhelming that device’s ability to process and respond. The firewall protecting the targeted server can also become exhausted as a result of UDP flooding, resulting in a denial-of-service to legitimate traffic.
+Scapy command :
+		Random mode : packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/UDP(sport=randint(4096,65535), dport=port)
+		Normal attack :packet = IP(dst=Dst, src=Src)/UDP(sport=Sport, dport=port)
 - ####Deauthentication Attacks :
 	[Deauthentication Attacks wikipedia page](https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack "Deauthentication Attacks wikipedia page")
 	Scapy command :
