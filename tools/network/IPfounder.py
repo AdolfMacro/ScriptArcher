@@ -3,11 +3,10 @@ from requests import get ,exceptions
 from re import findall
 from colorama import Fore as color
 from os import name , system
-import socket
 def IPfoundermain():
     system("clear")
     try:
-        re=get("https://whatismyipaddress.com/")
+        re=get("https://www.whoismyisp.org/")
     except exceptions.ConnectionError  :
         print(f'''{color.LIGHTGREEN_EX}
                                                                ~~~~~~           |
@@ -26,10 +25,11 @@ def IPfoundermain():
         input("\n\nEnter to continue : ")
         return None
     resault=re.text
-    IP=findall(r".*Your IP address: (.*)<.*",resault)[0]
+    findd=findall(r'.*<span style="color:white">(.*)class="unprotected">Unprotected</a></span>',resault)[0].split("·")
+    ip=findd[0]
+    isp=findd[1]
     print(f"""{color.LIGHTRED_EX}
-    ┬ ┬┌─┐┬ ┬┬─┐  ╦╔═╗  ┬┌─┐   
-    └┬┘│ ││ │├┬┘  ║╠═╝  │└─┐  o  {color.LIGHTGREEN_EX} {IP}{color.LIGHTRED_EX}
-     ┴ └─┘└─┘┴└─  ╩╩    ┴└─┘  o
+    {ip}
+   {isp}
     """)
     input("\n\nPleas [Enter] to continue : ")

@@ -12,9 +12,7 @@ def dBmAnalyzerMainF():
                 try:
                     printStr=""
                     sleep(0.5)
-                    process = subprocess.Popen(['iw', 'dev',iface,'scan'],
-                             stdout=subprocess.PIPE, 
-                             stderr=subprocess.PIPE)
+                    process = subprocess.Popen(['iw', 'dev',iface,'scan'],stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     stdout, stderr = process.communicate()
                     Cout=stdout.decode()
                     if stderr:

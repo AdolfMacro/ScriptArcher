@@ -29,7 +29,7 @@ def MassMailerAttackMain():
 
             ^C to back main menu
             """)
-            fileMail=input("\nEnter the file : ")
+            fileMail=input("\nEnter the recipient file path : ")
             sub=input("\nEnter email subject : ")
             smtpServer=input("\nEnter smtp server addres : ")
             smtpPort=input("\nEnter smtp port number : ")

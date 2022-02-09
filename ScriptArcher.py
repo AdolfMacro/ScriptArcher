@@ -36,7 +36,7 @@ try:
 except ImportError:
     print("\n\nCan not from os import name and sched_setscheduler !")
 try:
-    from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , BTserver , CTserver , dBmAnalyzer
+    from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer
 except ImportError:
     print("\n\nCan not import ScriptArcher tools")
 
@@ -68,19 +68,19 @@ def main():
             ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝       |/
                                                                                                                    (
 
-            1. What is my IP                       8. Bind on Server (TCP)
+            1. IPv6 finder                         8. dBm Analyzer
             
-            2. Mass Mailer Attack                  9. Connect to Server (TCP)
+            2. Mass Mailer Attack                  9. Exit
             
-            3. Scan                                10. dBm Analyzer
+            3. Scan                                 
 
-            4. DDoS                                11. Exit
+            4. DDoS                                
             
             5. Deauthentication Attacks
             
             6. Mac Spoofing 
             
-            7.Arp spoofing
+            7. Arp spoofing
 
     """)
     selection=input(f"{color.RED}[Network]~>{color.LIGHTGREEN_EX}")
@@ -99,12 +99,8 @@ def main():
     elif selection == "7":
         ArpSpoofing.ArpSpoofingMainF()
     elif selection == "8":
-        BTserver.BTserverMainF()
-    elif selection == "9":
-        CTserver.CTserverMainF()
-    elif selection == "10":
         dBmAnalyzer.dBmAnalyzerMainF()
-    elif selection=='11':
+    elif selection=='9':
         exit()
 while 1 :
     try:
