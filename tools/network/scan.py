@@ -107,14 +107,22 @@ def scanMainFunc():
             elif selection=="6":
                 Thost=input("\nEnter target ip : ")
                 Zhost=input("\nEnter zombie ip : ")
+                while 1:
+                    try:
+                        Zport=int(input("\nEnter zombie port : "))
+                        Tport=int(input("\nEnter target port : "))
+                        break
+                    except ValueError:
+                        print("\n[!] Value Error !\n\n")
                 saveToFile=input("\n\nSave output to file [N/y] : ").lower()
+                command=f"nmap -Pn -p{Tport} -sI {Zhost}:{Zport} {Thost}"                
                 if saveToFile=='y':
                     fileName=input("\nEnter file name : ")
-                    check_output(f"nmap -Pn -sI {Zhost} {Thost} -o {fileName}", shell=True, universal_newlines=True)
-                else:
-                    returned_text=check_output(f"nmap -Pn -sI {Zhost} {Thost}", shell=True, universal_newlines=True)
-                    print("\n\n"+returned_text+"\n\n")
-                    input("\n\nEnter to continue :")
+                    command+=f" -o {fileName}"
+                
+                returned_text=check_output(command, shell=True, universal_newlines=True)
+                print("\n\n"+returned_text+"\n\n")
+                input("\n\nEnter to continue :")
             elif selection=="7":
                 host=input("\nEnter ip : ")        
                 saveToFile=input("\n\nSave output to file [N/y] : ").lower()
