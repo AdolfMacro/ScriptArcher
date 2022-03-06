@@ -13,18 +13,14 @@ def MacSpoofingMainF():
     ██║ ╚═╝ ██║██║  ██║╚██████╗    ███████║██║     ╚██████╔╝╚██████╔╝██║     ██║██║ ╚████║╚██████╔╝
     ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝    ╚══════╝╚═╝      ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝
             \n\n      """)
-            ifc=input("\nEnter the interface (Must be in monitoring mode) : ")
-            print("\n_.~-> Please enter the fox to exit the scan <-~._")
-            sleep(2)
-            system(f"airodump-ng {ifc}")
-            Tmac=input("\n\n\nPlease enter the target mac : ")
+            ifc=input("\nEnter the interface : ")
             Smac=input("\nPlease enter mac to spoof : ")
             try :
-                sub.call(['sudo', 'ifconfig', interface, 'down'])
-                sub.call(['sudo', 'ifconfig', interface, 'hw', 'ether', new_mac])
-                sub.call(['sudo', 'ifconfig', interface, 'up'])
-            except :
-                print("\n\nProblem executing commands. Check the values and then try again\n\n")
+                call(['sudo', 'ifconfig', ifc, 'down'])
+                call(['sudo', 'ifconfig', ifc, 'hw', 'ether', Smac])
+                call(['sudo', 'ifconfig', ifc, 'up'])
+            except Exception as e:
+                print(f"\n\n[ ! ] {e}\n\n")
             Exit=input("\n\nDone !\n\nExit from MAC SPOOFING [N/y] ?").lower()
             if Exit=="y":
                 break
