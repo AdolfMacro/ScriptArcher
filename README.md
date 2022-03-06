@@ -34,6 +34,7 @@ Tools :
 - iw
 - net-tools
 - nmap
+- aircrack-ng
 ---
 ### How it works :
 > Brief descriptions :
