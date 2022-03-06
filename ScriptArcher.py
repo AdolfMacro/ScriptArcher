@@ -20,25 +20,16 @@ if getuid() != 0:
     ''')
     exit()
 try:
-    import random
-except ImportError:
-    print("\n\nCan not import random !")
-try:
     from colorama import Fore as color
 except ImportError:
     print("\n\nCan not from colorama import Fore !")
-try:
-    from random import randint
-except ImportError :
-    print("\n\nCan not from random import randint ! ")
-try:
-    from os import name as OSname, sched_setscheduler
-except ImportError:
-    print("\n\nCan not from os import name and sched_setscheduler !")
+
+from random import randint
 try:
     from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer
 except ImportError:
     print("\n\nCan not import ScriptArcher tools")
+
 
 def randomColor():
     num=randint(0,4)
@@ -83,7 +74,7 @@ def main():
             7. Arp spoofing
 
     """)
-    selection=input(f"{color.RED}[Network]~>{color.LIGHTGREEN_EX}")
+    selection=input(f"{color.RED}[ScriptArcher]~>{color.LIGHTGREEN_EX}")
     if selection=="1":
         IPfounder.IPfoundermain()
     elif selection == "2":
