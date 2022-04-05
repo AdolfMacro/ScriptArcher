@@ -61,9 +61,9 @@ def main():
 
             1. IPv6 finder                         8. dBm Analyzer
             
-            2. Mass Mailer Attack                  9. Sniffer
+            2. Mass Mailer Attack                  9. Exit
             
-            3. Scan                                10. Exit 
+            3. Scan                                
 
             4. DDoS                                
             
@@ -92,8 +92,6 @@ def main():
     elif selection == "8":
         dBmAnalyzer.dBmAnalyzerMainF()
     elif selection=='9':
-        sniffer.snifferMainF()
-    elif selection=='10':
         exit()
 while 1 :
     try:
