@@ -218,7 +218,20 @@ The Smurf attack is a distributed denial-of-service attack in which large number
   iw dev {interface name} scan
   ```
 	We are given a lot of information using the above command, but this tool separates and displays the DBM section from the rest of the information (this information is constantly updated)
+--------
+### Screenshots :
+<p float="left">
+  <img src="/screenshots/1.jpg" width="500" />
+  <img src="/screenshots/4.jpg" width="500" /> 
+</p>
+<p float="left">
+  <img src="/screenshots/2.jpg" width="500" />
+  <img src="/screenshots/3.jpg" width="500" /> 
+</p>
+
 ---
+
+
 ### Installation :
 ```
 git clone https://github.com/manikamran/ScriptArcher.git
