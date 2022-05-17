@@ -5,9 +5,8 @@ from colorama import Fore as color
 from os import name , system
 def IPfoundermain():
     system("clear")
-    try:
-        re=get("https://www.whoismyisp.org/")
-    except exceptions.ConnectionError  :
+    ip=socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET6)[1][4][0]
+    if ip == '::1':
         print(f'''{color.LIGHTGREEN_EX}
                                                                ~~~~~~           |
          .----.    ____                                   ,o88~~88888888o,      |
@@ -21,15 +20,10 @@ def IPfoundermain():
      /:::=======:::\`\`\\\\                               `   8888888b   ,888'    |
      `"""""""""""""`  '-'                                 ~-?8888888 _.P-~      |
                                                                ~~~~~~           | 
-                                ''')
+        ''')
         input("\n\nEnter to continue : ")
         return None
-    resault=re.text
-    findd=findall(r'.*<span style="color:white">(.*)class="unprotected">Unprotected</a></span>',resault)[0].split("·")
-    ip=findd[0]
-    isp=findd[1]
     print(f"""{color.LIGHTRED_EX}
     {ip}
-   {isp}
     """)
     input("\n\nPleas [Enter] to continue : ")

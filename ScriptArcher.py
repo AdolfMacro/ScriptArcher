@@ -2,6 +2,7 @@ try :
     from os import system , getuid
 except ImportError :
     print("\n\nCan not from os import system and getuid !")
+    exit()
 def clear():
     system("clear")
 clear()
@@ -23,12 +24,13 @@ try:
     from colorama import Fore as color
 except ImportError:
     print("\n\nCan not from colorama import Fore !")
-
+    exit()
 from random import randint
 try:
-    from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer , sniffer
-except ImportError:
-    print("\n\nCan not import ScriptArcher tools")
+    from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer
+except ImportError as e:
+    print(f"\n\nCan not import ScriptArcher tools\n\n[ E ] {e}")
+    exit()
 
 
 def randomColor():
