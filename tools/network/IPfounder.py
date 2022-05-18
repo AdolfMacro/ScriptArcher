@@ -1,5 +1,5 @@
 from requests import get ,exceptions
-
+import socket
 from re import findall
 from colorama import Fore as color
 from os import name , system
