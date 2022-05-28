@@ -10,12 +10,12 @@ echo -E """
     
 """
 
-# pip3 install scapy
-# pip3 install colorama
-# pip3 install contextlib
-# pip3 install email
-# pip3 install getpass
-# pip3 install requests
+pip3 install scapy
+pip3 install colorama
+pip3 install contextlib
+pip3 install email
+pip3 install getpass
+pip3 install requests
 
 release=$(egrep '^ID_LIKE=' /etc/os-release)
 if [[ $release == *"arch"* ]]; then
@@ -29,7 +29,7 @@ if [[ $release == *"debian"* ]]; then
   sudo apt-get --assume-yes install aircrack-ng
 fi
 
-if [[ $release == *"redhat"* ]]; then
+if [[ $release == *"rhel"* ]]; then
   yum -y install net-tools
   yum -y install nmap
   yum -y install aircrack-ng
