@@ -28,6 +28,7 @@ except ImportError:
 from random import randint
 try:
     from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer
+    from tools.intro import IntroMain
 except ImportError as e:
     print(f"\n\nCan not import ScriptArcher tools\n\n[ E ] {e}")
     exit()
@@ -50,6 +51,7 @@ def update():
 def Help():
     pass
 def main():
+    IntroMain()
     clear()
     print(f"""{randomColor()}
 
