@@ -269,3 +269,7 @@ sudo python3 install.py
 -----
 
 >Resources used: [varonis.com](https://www.varonis.com/blog/port-scanning-techniques "varonis.com") , [linuxhint.com](https://linuxhint.com/nmap_ping_sweep/ "linuxhint.com") , [nmap.org](http://nmap.org "nmap.org") , [en.wikipedia.org](http://en.wikipedia.org "en.wikipedia.org") , [cloudflare.com](https://www.cloudflare.com/learning/ddos/udp-flood-ddos-attack/ "cloudflare.com")
+
+------
+
+> The use of the ScriptArcher(all versions) COMPLETE RESPONSIBILITY of the END-USER. Developers assume NO liability and are NOT responsible for any misuse or damage caused by this program.
