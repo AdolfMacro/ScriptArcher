@@ -24,6 +24,7 @@
 	* [dBm Analyzer](https://github.com/AdolfMacro/ScriptArcher#dbm-analyzer-)
 * [Screenshots](https://github.com/AdolfMacro/ScriptArcher#screenshots-)
 * [Installation](https://github.com/AdolfMacro/ScriptArcher#installation-)
+* [Donate](https://github.com/AdolfMacro/ScriptArcher/#donate-)
 
 
 ----
@@ -266,6 +267,41 @@ The Smurf attack is a distributed denial-of-service attack in which large number
 git clone https://github.com/manikamran/ScriptArcher.git
 sudo python3 install.py
 ```
+------
+
+### Donate :
+
+<p>
+  <img 
+    width="130"
+    height="25"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bitcoin_logo.svg/1920px-Bitcoin_logo.svg.png"
+  >
+</p>
+
+BTC : bc1qyfargh3pvfuj8dha0a3nlcdc9qu08wr2ymuvls
+
+
+<p>
+  <img 
+    width="130"
+    height="35"
+    src="https://magazine4you.ir/en/wp-content/uploads/2022/04/ethereum-logo-long.png"
+  >
+</p>
+
+ETH : 0xD96CEdf36bA9E71C1dbc63eD3Ae3749226978d18
+
+<p>
+  <img 
+    width="130"
+    height="35"
+    src="https://www.nicepng.com/png/full/308-3087899_banner2-dogecoin-the-ultimate-beginners-guide-for-understanding.png"
+  >
+</p>
+
+Dogecoin : DGYnqWEEyhSkeeHtxWsZiSgPxBVsaS6eJm
+
 -----
 
 >Resources used: [varonis.com](https://www.varonis.com/blog/port-scanning-techniques "varonis.com") , [linuxhint.com](https://linuxhint.com/nmap_ping_sweep/ "linuxhint.com") , [nmap.org](http://nmap.org "nmap.org") , [en.wikipedia.org](http://en.wikipedia.org "en.wikipedia.org") , [cloudflare.com](https://www.cloudflare.com/learning/ddos/udp-flood-ddos-attack/ "cloudflare.com")
