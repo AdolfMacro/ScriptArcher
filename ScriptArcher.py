@@ -52,8 +52,9 @@ def Help():
     pass
 def main():
     IntroMain()
-    clear()
-    print(f"""{randomColor()}
+    while True:
+        clear()
+        print(f"""{randomColor()}
 
             ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗     █████╗ ██████╗  ██████╗██╗  ██╗███████╗██████╗        (
             ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝    ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔════╝██╔══██╗       |\\
@@ -61,7 +62,7 @@ def main():
             ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║       ██╔══██║██╔══██╗██║     ██╔══██║██╔══╝  ██╔══██╗    ##-------->
             ███████║╚██████╗██║  ██║██║██║        ██║       ██║  ██║██║  ██║╚██████╗██║  ██║███████╗██║  ██║       | )
             ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝       |/
-                                                                                                                   (
+                                                                                                                (
 
             1. IPv6 finder                         8. dBm Analyzer
             
@@ -77,32 +78,32 @@ def main():
             
             7. Arp spoofing
 
-    """)
-    selection=input(f"{color.RED}[ScriptArcher]~>{color.LIGHTGREEN_EX}")
-    if selection=="1":
-        IPfounder.IPfoundermain()
-    elif selection == "2":
-        MassMailerAttack.MassMailerAttackMain()
-    elif selection == "3":
-        scan.scanMainFunc()
-    elif selection == "4":
-        DDOS.DDOSmainF()
-    elif selection == "5":
-        DeauthenticationAttacks.DeauthenticationAttacksMainF()
-    elif selection == "6":
-        MacSpoofing.MacSpoofingMainF()
-    elif selection == "7":
-        ArpSpoofing.ArpSpoofingMainF()
-    elif selection == "8":
-        dBmAnalyzer.dBmAnalyzerMainF()
-    elif selection=='9':
-        exit()
-while 1 :
-    try:
-        main()
-    except KeyboardInterrupt:
-        clear()
-        print("""
+        """)
+        selection=input(f"{color.RED}[ScriptArcher]~>{color.LIGHTGREEN_EX}")
+        if selection=="1":
+            IPfounder.IPfoundermain()
+        elif selection == "2":
+            MassMailerAttack.MassMailerAttackMain()
+        elif selection == "3":
+            scan.scanMainFunc()
+        elif selection == "4":
+            DDOS.DDOSmainF()
+        elif selection == "5":
+            DeauthenticationAttacks.DeauthenticationAttacksMainF()
+        elif selection == "6":
+            MacSpoofing.MacSpoofingMainF()
+        elif selection == "7":
+            ArpSpoofing.ArpSpoofingMainF()
+        elif selection == "8":
+            dBmAnalyzer.dBmAnalyzerMainF()
+        elif selection=='9':
+            exit()
+
+try:
+    main()
+except KeyboardInterrupt:
+    clear()
+    print("""
             BYE
          _.-._
         | | | |_
@@ -113,5 +114,5 @@ while 1 :
        \    '   |
         \  .`  /
          |    |        
-        """)
-        break;
+    """)
+    exit()
