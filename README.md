@@ -248,6 +248,9 @@ The Smurf attack is a distributed denial-of-service attack in which large number
   iw dev {interface name} scan
   ```
 	We are given a lot of information using the above command, but this tool separates and displays the DBM section from the rest of the information (this information is constantly updated)
+	
+	
+ - -nb : This switch is used to not display the intro.
 --------
 ### Screenshots :
 <p float="left">
