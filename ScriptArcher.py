@@ -1,5 +1,6 @@
 try :
     from os import system , getuid
+    from sys import argv
 except ImportError :
     print("\n\nCan not from os import system and getuid !")
     exit()
@@ -51,7 +52,8 @@ def update():
 def Help():
     pass
 def main():
-    IntroMain()
+    if not "-nb" in argv :
+        IntroMain()
     while True:
         clear()
         print(f"""{randomColor()}
