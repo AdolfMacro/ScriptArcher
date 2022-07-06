@@ -22,6 +22,7 @@
 	* [Mac Spoofing](https://github.com/AdolfMacro/ScriptArcher#mac-spoofing-)
 	* [Arp spoofing](https://github.com/AdolfMacro/ScriptArcher#arp-spoofing-)
 	* [dBm Analyzer](https://github.com/AdolfMacro/ScriptArcher#dbm-analyzer-)
+	* [Subdomain scanner](https://github.com/AdolfMacro/ScriptArcher#subdomain-scanner-)
 * [Screenshots](https://github.com/AdolfMacro/ScriptArcher#screenshots-)
 * [Installation](https://github.com/AdolfMacro/ScriptArcher#installation-)
 * [Donate](https://github.com/AdolfMacro/ScriptArcher/#donate-)
@@ -249,6 +250,8 @@ The Smurf attack is a distributed denial-of-service attack in which large number
   ```
 	We are given a lot of information using the above command, but this tool separates and displays the DBM section from the rest of the information (this information is constantly updated)
 	
+- #### Subdomain scanner :
+	Using a list of subdomains and request library, it sends requests in the form of a flood and finally displays the found items.
 	
  - -nb : This switch is used to not display the intro.
 --------
