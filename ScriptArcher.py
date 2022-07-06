@@ -30,6 +30,7 @@ from random import randint
 try:
     from tools.network import IPfounder , MassMailerAttack , scan , DDOS ,DeauthenticationAttacks , MacSpoofing  , ArpSpoofing , dBmAnalyzer
     from tools.intro import IntroMain
+    from tools.web import subScanner
 except ImportError as e:
     print(f"\n\nCan not import ScriptArcher tools\n\n[ E ] {e}")
     exit()
@@ -68,9 +69,9 @@ def main():
 
             1. IPv6 finder                         8. dBm Analyzer
             
-            2. Mass Mailer Attack                  9. Exit
+            2. Mass Mailer Attack                  9. Subdomain scanner
             
-            3. Scan                                
+            3. Scan                                10. Exit
 
             4. DDoS                                
             
@@ -98,7 +99,9 @@ def main():
             ArpSpoofing.ArpSpoofingMainF()
         elif selection == "8":
             dBmAnalyzer.dBmAnalyzerMainF()
-        elif selection=='9':
+        elif selection=="9":
+            subScanner.mainSubScanner()
+        elif selection=='10':
             exit()
 
 try:
