@@ -46,7 +46,7 @@ replacewith=""
 line="${line/${replace}/${replacewith}}"
 echo $line
 sudo -u root cp -R $line/* /usr/src/scriptarcher/
-sudo sh -c 'echo "python3 /usr/src/scriptarcher/ScriptArcher.py $1" > /usr/local/bin/scriptarcher'
+sudo sh -c 'echo "python3 /usr/src/scriptarcher/ScriptArcher.py \$1" > /usr/local/bin/scriptarcher'
 sudo -u root chmod +x /usr/local/bin/scriptarcher
 echo """
 ██████╗  ██████╗ ███╗   ██╗███████╗
