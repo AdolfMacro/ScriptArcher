@@ -100,10 +100,8 @@ re=get("https://www.whoismyisp.org/")
 
    It will then ask you for the original text of the email (**enter the ^C to finish writing**)
 #### Note:
-To use this tool, you must enable the Less secure app access option in your Google Account settings. To activate, go to the following link:
-https://www.google.com/settings/security/lesssecureapps
-If you do not know what Less secure app access is, refer to the following link:
-	https://support.google.com/accounts/answer/6010255?hl=en
+To use this tool, you must enable the Less secure app access option in your Google Account settings. To activate, go to this [link](https://www.google.com/settings/security/lesssecureapps).
+If you do not know what Less secure app access is, refer to this [link](https://support.google.com/accounts/answer/6010255?hl=en).
 
 - #### Scan :
 	This part of the tool performs a series of scans using NMAP.
@@ -129,7 +127,7 @@ If you do not know what Less secure app access is, refer to the following link:
 
 		Nmap command :
        ```
-		nmap -sp {host}* -o {fileName
+		nmap -sp {host}* -o {fileName}
 		```
 
 	4. **Scan popular ports** :
